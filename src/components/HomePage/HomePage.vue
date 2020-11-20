@@ -62,7 +62,7 @@
                     hide-selected
                     label="Search for an option"
                     multiple
-                    small-chips
+                    x-small-chips
                     solo
                   >
                     <template v-slot:selection="{ attrs, item, parent, selected }">
@@ -72,7 +72,7 @@
                         :color="`${item.color} lighten-3`"
                         :input-value="selected"
                         label
-                        small
+                        x-small
                         class="ma-2"
                         outlined
                       >
@@ -85,7 +85,7 @@
                         :color="`${item.color} lighten-3`"
                         dark
                         label
-                        small
+                        x-small
                         class="ma-2"
                         outlined
                       >{{ item.text }}</v-chip>

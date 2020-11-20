@@ -1,13 +1,5 @@
 const state = {
-    filter: [
-        {
-            keyWord: '',
-            monetaryFlag: '',
-            tags: [''],
-            itemType: '',
-            city: ''
-        }
-    ]
+    filter: null
 };
 
 const getters = {

@@ -70,11 +70,12 @@ export default {
     submit() {
       this.snackbar = true
       this.saveAllFilters();
+      this.$router.push({ path: 'tablePage' })
       this.resetForm()
     },
     ...mapActions(['saveFilter']),
     saveAllFilters() {
-
+      console.log(`Esses são os filtros a serem salvos: ${this.defaultForm}`);
       this.saveFilter(this.defaultForm);
       console.log('salvei na store');
     }
