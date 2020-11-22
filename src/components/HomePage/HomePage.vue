@@ -17,7 +17,7 @@
                     <v-autocomplete
                       v-model="form.mainSearch"
                       :hint="'Write here where you do you wanna go'"
-                      :items="states"
+                      :items="places"
                       :label="'Your Location'"
                       persistent-hint
                       prepend-icon="mdi-magnify"
