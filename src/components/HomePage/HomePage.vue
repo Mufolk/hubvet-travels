@@ -46,10 +46,10 @@
 
                 <v-col cols="2" sm="2">
                   <v-btn-toggle v-model="form.monetaryValue" mandatory>
-                    <v-btn small depressed color="green lighten-4" :value="true">
+                    <v-btn small depressed color="green lighten-4">
                       <v-icon>mdi-currency-usd</v-icon>
                     </v-btn>
-                    <v-btn small depressed color="green lighten-4" :value="false">
+                    <v-btn small depressed color="green lighten-4">
                       <v-icon>mdi-circle-multiple-outline</v-icon>
                     </v-btn>
                   </v-btn-toggle>

@@ -1,5 +1,5 @@
 const state = {
-    filter: null
+    filter: []
 };
 
 const getters = {
@@ -15,7 +15,7 @@ const actions = {
 };
 
 const mutations = {
-    setFilter: (state, filter) => (state.filter = filter)
+    setFilter: (state, newFilter) => (state.filter.push(newFilter))
 };
 
 export default {
