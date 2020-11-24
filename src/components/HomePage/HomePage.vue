@@ -1,5 +1,5 @@
 <template>
-  <v-container class="center">
+  <v-container class="general-color center">
     <v-row class="text-center">
       <v-col cols="12">
         <v-card flat>
@@ -7,8 +7,9 @@
             <span>Registration successful!</span>
             <v-icon dark>mdi-checkbox-marked-circle</v-icon>
           </v-snackbar>
-          <v-form ref="form" @submit.prevent="submit">
-            <v-container fluid>
+          <v-form ref="form" class="general-color" @submit.prevent="submit">
+            <v-container class="general-color" fluid>
+              <img src="../../assets/logo.png" class="main-logo">
               <v-row>
                 <v-col cols="3" sm="3"></v-col>
                 <v-col cols="6" sm="6">
@@ -28,6 +29,7 @@
 
                 <v-col cols="3" sm="3">
                   <v-select
+                    hide-details
                     v-model="form.combo"
                     :items="combos"
                     color="pink"
@@ -41,15 +43,16 @@
                     v-model="form.city"
                     color="purple darken-2"
                     required
+                    hide-details
                   ></v-text-field>
                 </v-col>
 
-                <v-col cols="2" sm="2">
-                  <v-btn-toggle v-model="form.monetaryValue" mandatory>
-                    <v-btn small depressed color="green lighten-4">
+                <v-col class="btn-flex" cols="2" sm="2">
+                  <v-btn-toggle hide-details v-model="form.monetaryValue" mandatory>
+                    <v-btn small depressed color="cyan lighten-4">
                       <v-icon>mdi-currency-usd</v-icon>
                     </v-btn>
-                    <v-btn small depressed color="green lighten-4">
+                    <v-btn small depressed color="cyan lighten-4">
                       <v-icon>mdi-circle-multiple-outline</v-icon>
                     </v-btn>
                   </v-btn-toggle>
@@ -64,8 +67,10 @@
                     multiple
                     x-small-chips
                     solo
+                    hide-details
+                    flat
                   >
-                    <template v-slot:selection="{ attrs, item, parent, selected }">
+                    <template v-slot:selection="{ attrs, item, parent, selected }" >
                       <v-chip
                         v-if="item === Object(item)"
                         v-bind="attrs"
@@ -94,8 +99,8 @@
                 </v-col>
               </v-row>
             </v-container>
-            <v-card-actions class="submit-button">
-              <v-btn :disabled="!formIsValid" text color="primary" type="submit">Pesquisar</v-btn>
+            <v-card-actions class="submit-button btn-color">
+              <v-btn  text class="btn-color" type="submit">Pesquisar</v-btn>
             </v-card-actions>
           </v-form>
         </v-card>
