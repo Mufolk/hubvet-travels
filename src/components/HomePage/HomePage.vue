@@ -9,7 +9,7 @@
           </v-snackbar>
           <v-form ref="form" class="general-color" @submit.prevent="submit">
             <v-container class="general-color" fluid>
-              <img src="../../assets/logo.png" class="main-logo">
+              <img src="../../assets/logo.png" class="main-logo" />
               <v-row>
                 <v-col cols="3" sm="3"></v-col>
                 <v-col cols="6" sm="6">
@@ -39,12 +39,7 @@
                 </v-col>
 
                 <v-col cols="3" sm="3">
-                  <v-text-field
-                    v-model="form.city"
-                    color="purple darken-2"
-                    required
-                    hide-details
-                  ></v-text-field>
+                  <v-text-field v-model="form.city" color="purple darken-2" required hide-details></v-text-field>
                 </v-col>
 
                 <v-col class="btn-flex" cols="2" sm="2">
@@ -70,7 +65,7 @@
                     hide-details
                     flat
                   >
-                    <template v-slot:selection="{ attrs, item, parent, selected }" >
+                    <template v-slot:selection="{ attrs, item, parent, selected }">
                       <v-chip
                         v-if="item === Object(item)"
                         v-bind="attrs"
@@ -100,7 +95,7 @@
               </v-row>
             </v-container>
             <v-card-actions class="submit-button btn-color">
-              <v-btn  text class="btn-color" type="submit">Pesquisar</v-btn>
+              <v-btn text class="btn-color" type="submit">Pesquisar</v-btn>
             </v-card-actions>
           </v-form>
         </v-card>
@@ -111,19 +106,3 @@
 
 <script src="./HomePage.js"></script>
 <style src="./HomePage.css"></style>
-
-
-<!--<v-dialog v-model="terms" width="70%">
-            <v-card>
-              <v-card-title class="title">Terms</v-card-title>
-              <v-card-text v-for="n in 5" :key="n">{{ content }}</v-card-text>
-              <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn text color="purple" @click="terms = false">Ok</v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-dialog> -->
-<!-- 
-
-
--->
