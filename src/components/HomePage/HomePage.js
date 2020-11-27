@@ -23,6 +23,8 @@ export default {
     }
   },
   computed: {
+    //if some validation form is need, just add this to 
+    //the vue button tag to disable it
     formIsValid() {
       return (
         this.form.combo &&
@@ -57,19 +59,4 @@ export default {
       this.saveFilter(this.form)
     }
   },
-  // data: () => ({
-  //   filter: {
-  //     keyWord: '',
-  //     monetaryFlag: '',
-  //     tags: [''],
-  //     itemType: '',
-  //     city: '',
-  //   }
-  // }),
-
-  // methods: {
-  
-  // },
-
-  // computed: mapGetters([getFilter]),
 };

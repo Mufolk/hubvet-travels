@@ -1,0 +1,11 @@
+.menu-logo{
+    width: 9%;
+}
+
+.menu-logo:hover{
+    cursor:pointer;
+}
+
+.general-color {
+    background-color: #F5F6F8;
+}

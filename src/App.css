@@ -6,6 +6,8 @@
     width: 7%;
 }
 
+/* Here I need to use the important tag because 
+of the vuetify beahviour */
 .footer-p-margin{
     margin: 0 0.5em !important;
 }
